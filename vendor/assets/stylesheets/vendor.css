@@ -1,0 +1,11 @@
+/*
+ * This is a manifest file for plugins
+ *
+ *= require ./bootstrap/bootstrap
+ *= require ./font-awesome/font-awesome
+ *= require ./datepicker/datepicker
+ *= require ./datepicker/datepicker3
+ *= require ./selectize/index
+ *= require ./datatables/index
+ *= require ./pivot-js/custom
+ */

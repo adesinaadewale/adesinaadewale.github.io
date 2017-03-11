@@ -1,0 +1,20 @@
+%h1.page-header
+  Members
+  %small / Index
+.row
+  .col-md-12
+    .text-right
+      = new_link Member do
+        %button.btn.btn-success{type: 'button'} New
+    .spaceholder
+    .table-responsive
+      %table#datatable.table.table-striped{ data: { source: table_members_path(format: :json) }}
+        %thead
+          %tr
+            %th #
+            %th Code
+            %th Name
+            %th Membership
+            %th Type
+            %th.action-cell
+        %tbody

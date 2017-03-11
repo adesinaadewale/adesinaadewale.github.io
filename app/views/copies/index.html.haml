@@ -1,0 +1,21 @@
+%h1.page-header
+  Copies
+  %small / Index
+.row
+  .col-md-12
+    .text-right
+      = new_link Copy do
+        %button.btn.btn-success{type: 'button'} New
+    .spaceholder
+    .table-responsive
+      %table#datatable.table.table-striped{ data: { source: table_copies_path(format: :json) }}
+        %thead
+          %tr
+            %th #
+            %th Item
+            %th Accession No
+            %th Quality
+            %th Status
+            %th Issued
+            %th.action-cell
+        %tbody

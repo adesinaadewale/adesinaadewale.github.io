@@ -1,0 +1,23 @@
+%h1.page-header
+  Issues
+  %small / Index
+.row
+  .col-md-12
+    .text-right
+      = new_link Issue do
+        %button.btn.btn-success{type: 'button'} New
+    .spaceholder
+    .table-responsive
+      %table#datatable.table.table-striped{ data: { source: table_issues_path(format: :json) }}
+        %thead
+          %tr
+            %th #
+            %th Item
+            %th Accession No
+            %th Member
+            %th Issued
+            %th Return
+            %th Extensions
+            %th Status
+            %th.action-cell
+        %tbody

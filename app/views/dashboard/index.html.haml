@@ -1,0 +1,53 @@
+%h1.page-header
+  Home
+  %small / Dashboard
+.row
+  .col-md-3
+    .panel.panel-success
+      .panel-heading
+        .dashboard-metric.pull-right
+          .text-right= @open_issues
+        .dashboard-icon
+          %i.fa.fa-tags
+        %p Currently Issued
+  .col-md-3
+    .panel.panel-info
+      .panel-heading
+        .dashboard-metric.pull-right
+          .text-right= @issues_30_days
+        .dashboard-icon
+          %i.fa.fa-calendar
+        %p Issues in Past 30 Days
+  .col-md-3
+    .panel.panel-warning
+      .panel-heading
+        .dashboard-metric.pull-right
+          .text-right= @open_reservations
+        .dashboard-icon
+          %i.fa.fa-lock
+        %p Currently Reserved
+  .col-md-3
+    .panel.panel-danger
+      .panel-heading
+        .dashboard-metric.pull-right
+          .text-right= @overdue_issues
+        .dashboard-icon
+          %i.fa.fa-bell
+        %p Currently Overdue
+%hr
+.row
+  .col-md-6
+    .panel.panel-default
+      .panel-heading
+        %i.fa.fa-bar-chart-o
+        Trend
+      .panel-body
+        #display_trend.dashboard-chart{data: {chart: @trend}}
+  .col-md-6
+    .panel.panel-default
+      .panel-heading
+        %i.fa.fa-align-left
+        Share
+      .panel-body
+        #display_share.dashboard-chart{data: {chart: @share}}
+%hr

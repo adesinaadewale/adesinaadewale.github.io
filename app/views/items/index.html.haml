@@ -1,0 +1,21 @@
+%h1.page-header
+  Items
+  %small / Index
+.row
+  .col-md-12
+    .text-right
+      = new_link Item do
+        %button.btn.btn-success{type: 'button'} New
+    .spaceholder
+    .table-responsive
+      %table#datatable.table.table-striped{ data: { source: table_items_path(format: :json) }}
+        %thead
+          %tr
+            %th #
+            %th Code
+            %th Name
+            %th Category
+            %th Type
+            %th Format
+            %th.action-cell
+        %tbody

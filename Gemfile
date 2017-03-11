@@ -1,0 +1,72 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.1.4'
+gem 'rake'
+
+# Databases
+gem 'pg', '~> 0.18.4'
+
+# assets
+gem 'sass-rails', '~> 4.0.0'
+gem 'uglifier'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'haml'
+gem 'haml-rails'
+gem 'turbolinks'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+# api
+gem 'jbuilder'
+
+# images
+gem 'mini_magick'
+gem 'carrierwave'
+
+# user
+gem 'devise'
+gem 'cancan'
+gem 'rolify'
+
+# workflow
+gem 'workflow'
+
+# forms
+gem 'simple_form'
+gem 'country_select'
+gem 'nested_form'
+gem 'kaminari'
+gem 'mousetrap-rails'
+
+# excel
+gem 'rubyXL'
+gem 'nokogiri'
+gem 'rubyzip'
+
+# settings
+gem 'rails-settings-cached'
+
+# server
+gem 'puma'
+
+# development
+group :development do
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem 'pry-rails'
+  # gem 'rack-mini-profiler'
+end
+
+# test
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
+
+# documentation
+group :doc do
+  gem 'sdoc', require: false
+end

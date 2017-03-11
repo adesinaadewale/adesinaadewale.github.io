@@ -1,0 +1,19 @@
+%h1.page-header
+  Creators
+  %small / Index
+.row
+  .col-md-12
+    .text-right
+      = new_link Creator do
+        %button.btn.btn-success{type: 'button'} New
+    .spaceholder
+    .table-responsive
+      %table#datatable.table.table-striped{ data: { source: table_creators_path(format: :json) }}
+        %thead
+          %tr
+            %th #
+            %th Type
+            %th Name
+            %th Sort Name
+            %th.action-cell
+        %tbody

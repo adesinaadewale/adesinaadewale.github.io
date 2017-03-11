@@ -1,0 +1,19 @@
+%h1.page-header
+  Categories
+  %small / View
+.row
+  .col-md-12
+    .text-right
+      = render 'shared/masters/show_actions'
+
+    .row
+      .col-md-6
+        = display_field @category.code, label: 'Code'
+      .col-md-6
+        = display_field @category.name, label: 'Name'
+    .row
+      .col-md-6
+        = display_field @category.kind.titleize, label: 'Type'
+    .row
+      .col-md-12
+        = display_field @category.notes, label: 'Notes'

@@ -1,0 +1,30 @@
+%h1.page-header
+  Creators
+  %small / View
+.row
+  .col-md-12
+    .text-right
+      = render 'shared/masters/show_actions'
+
+    .row
+      .col-md-6.text-center.pull-right
+        .image-container
+          = image_tag @creator.photo.thumb.url
+      .col-md-6
+        .row
+          .col-md-12
+            = display_field @creator.kind.titleize, label: 'Type'
+        .row
+          .col-md-12
+            = display_field @creator.first_name, label: 'First Name'
+        .row
+          .col-md-12
+            = display_field @creator.last_name, label: 'Last Name'
+    .row
+      .col-md-6
+        = display_field @creator.full_name, label: 'Full Name'
+      .col-md-6
+        = display_field @creator.sort_name, label: 'Sort Name'
+    .row
+      .col-md-12
+        = display_field @creator.notes, label: 'Notes'
